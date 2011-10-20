@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+  <title>Google+ Styled Buttons, Icon Buttons &amp; Dropdown Menu Buttons by Social-IT-e Media</title>
+  <meta name="description" content="This is an easy to implement framework of Google+ styled buttons, icon buttons &amp; dropdown menu buttons that look and work great in web applications.">
+  <meta name="author" content="Bruce Galpin">
+  <meta name="version" content="1.3">
+  <!-- For documentation please visit http://shrapp.nl/post/google-plus-ui-buttons -->
+  
+  <link rel="stylesheet" href="css/css3-buttons.css" type="text/css"  media="screen">
+  
+  <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Molengo' rel='stylesheet' type='text/css'>
+  
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  
+  <!-- Using TipTip jQuery plugin for the tooltips -->
+  <link rel="stylesheet" href="tiptip.css" type="text/css"  media="screen">
+	<script src="jquery.tiptip.js"></script>
+  
+	<script>
+		$(document).ready(function() {
+		
+			// Toggle the dropdown menu's
+			$(".dropdown .button, .dropdown button").click(function () {
+				if (!$(this).find('span.toggle').hasClass('active')) {
+					$('.dropdown-slider').slideUp();
+					$('span.toggle').removeClass('active');
+				}
+       
+        // open selected dropown
+				$(this).parent().find('.dropdown-slider').slideToggle('fast');
+				$(this).find('span.toggle').toggleClass('active');
+				
+				return false;
+			});
+			
+			// Launch TipTip tooltip
+			$('.tiptip a.button, .tiptip button').tipTip();
+		
+		});
+		
+		// Close open dropdown slider by clicking elsewhwere on page
+		$(document).bind('click', function (e) {
+			if (e.target.id != $('.dropdown').attr('class')) {
+				$('.dropdown-slider').slideUp();
+				$('span.toggle').removeClass('active');
+			}
+		});
+  </script>
+  
+  <style>
+  <!--
+		a, a:active, a:visited { color: #607890; }
+		a:hover { color: #036; }
+		
+		.buttons {
+			background: #F1F1F1;
+			padding: 11px;
+			border: 1px solid #D2D2D2;
+			width: 843px;
+			margin-bottom: 20px;
+		}
+		
+		body {
+			font-family: 'PT Sans', Arial, Helvetica, sans-serif;
+			text-align: center;
+			background: url(tile.jpg) top center fixed;
+			margin: 0;
+		}
+		
+		#container {
+			text-align: left;
+			background: #FFF;
+			width: 865px;
+			margin: 0 auto;
+			padding: 20px;
+			border-left: 1px solid #CCC;
+			border-right: 1px solid #CCC;
+			
+			-moz-box-shadow: 0px 0px 10px #BBB;
+			-webkit-box-shadow: 0px 0px 10px #BBB;
+			box-shadow: 0px 0px 10px #BBB;
+		}
+		
+		h1, h2, h3, h4, h5 {
+			font-family: Molengo, Arial, Helvetica, sans-serif;
+			margin: 0 0 14px 0;
+			padding: 0;
+		}
+		
+		p {
+			margin: 0 0 7px 0;
+			padding: 0;
+		}
+  -->
+  </style>
+</head>
+<body>
+<div id="container">
+
+<h1>Google+ Styled Buttons</h1>
+
+<p>Inspired by the web, and Created by Bruce Galpin (<a href="http://www.socialite-media.co.za/">Social-IT-e Media</a>).</p>
+
+<p>This is an easy to implement framework of Google+ styled buttons, icon buttons & dropdown menu buttons that look and work great in web applications.</p>
+
+<h3>Download:</h3>
+
+<ul>
+  <li><a href="http://code.shrapp.nl/google-plus-ui-buttons/download/index.php?f=google-plus-ui-buttons.zip">Zip Archive: google-plus-ui-buttons.zip</a></li>
+  <li><a href="http://code.shrapp.nl/google-plus-ui-buttons/download/index.php?f=google-plus-ui-buttons.rar">Rar Archive: google-plus-ui-buttons.rar</a></li>
+</ul>
+
+<h3>Documentation:</h3>
+
+<ul>
+<li><a href="http://shrapp.nl/post/google-plus-ui-buttons">Shrapp.nl &mdash; Google+ UI Buttons</a></li>
+</ul>
+
+<h2>Google+ Buttons / Icon Buttons</h2>
+
+<div class="buttons">
+  <button><span class="label">Button</span></button>
+  
+  <a href="#" class="button on"><span class="label">Active</span></a>
+  
+  <a href="#" class="button left"><span class="label">Left</span></a>
+  <a href="#" class="button middle"><span class="label">Middle</span></a>
+  <a href="#" class="button right"><span class="label">Right</span></a>
+  
+  <div class="tiptip">
+    <a href="#" class="button left" title="Home"><span class="icon icon108"></span></a>
+    <a href="#" class="button middle" title="Photos"><span class="icon icon148"></span></a>
+    <a href="#" class="button middle" title="Music"><span class="icon icon134"></span></a>
+    <a href="#" class="button right" title="Save"><span class="icon icon67"></span></a>
+  </div> <!-- /.tiptip -->
+  
+  <a href="#" class="button left"><span class="icon icon22"></span></a>
+  <a href="#" class="button middle"><span class="icon icon177"></span></a>
+  <a href="#" class="button right"><span class="icon icon153"></span></a>
+  
+  <a href="#" class="button on"><span class="icon icon125"></span></a>
+  
+  <a href="#" class="button left"><span class="icon icon127"></span></a>
+  <a href="#" class="button middle"><span class="icon icon84"></span></a>
+  <a href="#" class="button right"><span class="icon icon186"></span></a>
+</div> <!-- /.buttons -->
+
+<h2>Google+ Action Buttons</h2>
+
+<div class="buttons">
+  <button class="action blue"><span class="label">Save</span></button>
+  <button class="action red"><span class="label">Upload</span></button>
+  <button class="action green"><span class="label">Comment</span></button>
+  <button class="action"><span class="label">Cancel</span></button>
+</div> <!-- /.buttons -->
+
+<h2>Google+ Icon Buttons with Label</h2>
+
+<div class="buttons">
+  <a href="#" class="button"><span class="icon icon4"></span><span class="label">Profile</span></a>
+  
+  <a href="#" class="button"><span class="icon icon19"></span><span class="label">Find</span></a>
+  
+  <a href="#" class="button left"><span class="icon icon63"></span><span class="label">Left</span></a>
+  <a href="#" class="button middle"><span class="icon icon58"></span><span class="label">Middle</span></a>
+  <a href="#" class="button right"><span class="icon icon64"></span><span class="label">Right</span></a> 
+  
+  <a href="#" class="button left"><span class="icon icon108"></span><span class="label">Normal</span></a>
+  <a href="#" class="button middle"><span class="icon icon125"></span><span class="label red">Red</span></a>
+  <a href="#" class="button middle"><span class="icon icon191"></span><span class="label blue">Blue</span></a>
+  <a href="#" class="button middle"><span class="icon icon151"></span><span class="label green">Green</span></a>
+  <a href="#" class="button right"><span class="icon icon177"></span><span class="label yellow">Yellow</span></a>
+</div> <!-- /.buttons -->
+
+<h2>Dropdown Menu Buttons</h2>
+
+<div class="buttons">
+  <div class="dropdown">
+    <a href="#" class="button"><span class="label">File</span><span class="toggle"></span></a>
+    <div class="dropdown-slider">
+      <a href="#" class="ddm"><span class="label">New</span></a>
+      <a href="#" class="ddm"><span class="label">Save</span></a>
+    </div> <!-- /.dropdown-slider -->
+  </div> <!-- /.dropdown -->
+  
+  <div class="dropdown">
+    <a href="#" class="button"><span class="icon icon55"></span><span class="label">File</span><span class="toggle"></span></a>
+    <div class="dropdown-slider">
+      <a href="#" class="ddm"><span class="icon icon68"></span><span class="label">New</span></a>
+      <a href="#" class="ddm"><span class="icon icon92"></span><span class="label">Open</span></a>
+      <a href="#" class="ddm"><span class="icon icon67"></span><span class="label">Save</span></a>
+    </div> <!-- /.dropdown-slider -->
+  </div> <!-- /.dropdown -->
+  
+  <div class="dropdown left">
+    <a href="#" class="button left"><span class="icon icon96"></span><span class="label">Options</span><span class="toggle"></span></a>
+    <div class="dropdown-slider">
+      <a href="#" class="ddm"><span class="icon icon127"></span><span class="label">Profile</span></a>
+      <a href="#" class="ddm"><span class="icon icon125"></span><span class="label">Inbox (3)</span></a>
+      <a href="#" class="ddm"><span class="icon icon196"></span><span class="label">Settings</span></a>
+      <a href="#" class="ddm negative"><span class="icon icon151"></span><span class="label">Logout</span></a>
+    </div> <!-- /.dropdown-slider -->
+  </div> <!-- /.dropdown -->
+  <div class="dropdown right">
+    <button class="right"><span class="icon icon116"></span><span class="label">Actions</span><span class="toggle"></span></button>
+    <div class="dropdown-slider">
+      <a href="#" class="ddm"><span class="icon icon122"></span><span class="label">Lock</span></a>
+      <a href="#" class="ddm"><span class="icon icon123"></span><span class="label">Unlock</span></a>
+    </div> <!-- /.dropdown-slider -->
+  </div> <!-- /.dropdown -->
+  
+  <div class="dropdown">
+    <a href="#" class="button"><span class="icon icon197"></span><span class="label">World Regions</span><span class="toggle"></span></a>
+    <div class="dropdown-slider">
+      <a href="#" class="ddm"><span class="label">The Americas</span></a>
+      <a href="#" class="ddm"><span class="label">Europe &amp; Eurasia</span></a>
+      <a href="#" class="ddm"><span class="label">Africa / Middle East</span></a>
+      <a href="#" class="ddm"><span class="label">East Asia &amp; The Pacific</span></a>
+      <a href="#" class="ddm"><span class="label">South &amp; Central Asia</span></a>
+    </div> <!-- /.dropdown-slider -->
+  </div> <!-- /.dropdown -->
+  
+  <a href="#" class="button left"><span class="icon icon108"></span></a>
+  <div class="dropdown middle">
+    <a href="#" class="button middle"><span class="icon icon68"></span><span class="toggle"></span></a>
+    <div class="dropdown-slider">
+      <a href="#" class="ddm"><span class="icon icon3"></span><span class="label">Add</span></a>
+      <a href="#" class="ddm"><span class="icon icon145"></span><span class="label">Edit</span></a>
+      <a href="#" class="ddm"><span class="icon icon186"></span><span class="label">Trash</span></a>
+    </div> <!-- /.dropdown-slider -->
+  </div> <!-- /.dropdown -->
+  <a href="#" class="button right"><span class="icon icon151"></span></a>
+</div> <!-- /.buttons -->
+
+<h2>Google+ Icons (200)</h2>
+<p>This icon set is brought to you by <a href="http://www.webdesignshock.com/google-plus-interface-icons/">WebDesignShock</a>.</p>
+<p>Roll your mouse over the icons for the icon classname and title. The tooltip is a customised jQuery <a href="http://code.drewwilson.com/entry/tiptip-jquery-plugin">TipTip</a> plugin (included in the download).</p>
+
+<div class="buttons tiptip"> 
+  <a href="#" class="button" title=".icon1 - Abacus"><span class="icon icon1"></span></a>
+  <a href="#" class="button" title=".icon2 - Access Point"><span class="icon icon2"></span></a>
+  <a href="#" class="button" title=".icon3 - Add"><span class="icon icon3"></span></a>
+  <a href="#" class="button" title=".icon4 - Administrator"><span class="icon icon4"></span></a>
+  <a href="#" class="button" title=".icon5 - Alarm"><span class="icon icon5"></span></a>
+  <a href="#" class="button" title=".icon6 - Arrow Bidirectional"><span class="icon icon6"></span></a>
+  <a href="#" class="button" title=".icon7 - Arrow Down"><span class="icon icon7"></span></a>
+  <a href="#" class="button" title=".icon8 - Arrow Left"><span class="icon icon8"></span></a>
+  <a href="#" class="button" title=".icon9 - Arrow Right"><span class="icon icon9"></span></a>
+  <a href="#" class="button" title=".icon10 - Arrow Up"><span class="icon icon10"></span></a>
+  <a href="#" class="button" title=".icon11 - Attachment"><span class="icon icon11"></span></a>
+  <a href="#" class="button" title=".icon12 - Audio Knob"><span class="icon icon12"></span></a>
+  <a href="#" class="button" title=".icon13 - Barcode"><span class="icon icon13"></span></a>
+  <a href="#" class="button" title=".icon14 - Battery Empty"><span class="icon icon14"></span></a>
+  <a href="#" class="button" title=".icon15 - Battery Full"><span class="icon icon15"></span></a>
+  <a href="#" class="button" title=".icon16 - Battery Half"><span class="icon icon16"></span></a>
+  <a href="#" class="button" title=".icon17 - Bell"><span class="icon icon17"></span></a>
+  <a href="#" class="button" title=".icon18 - Bill"><span class="icon icon18"></span></a>
+  <a href="#" class="button" title=".icon19 - Binoculars"><span class="icon icon19"></span></a>
+  <a href="#" class="button" title=".icon20 - Bold"><span class="icon icon20"></span></a>
+  <a href="#" class="button" title=".icon21 - Book"><span class="icon icon21"></span></a>
+  <a href="#" class="button" title=".icon22 - Bookmark"><span class="icon icon22"></span></a>
+  <a href="#" class="button" title=".icon23 - Briefcase"><span class="icon icon23"></span></a>
+  <a href="#" class="button" title=".icon24 - Brightness"><span class="icon icon24"></span></a>
+  <a href="#" class="button" title=".icon25 - Broken Link"><span class="icon icon25"></span></a>
+  <a href="#" class="button" title=".icon26 - Brush"><span class="icon icon26"></span></a>
+  <a href="#" class="button" title=".icon27 - Burn Blu-ray"><span class="icon icon27"></span></a>
+  <a href="#" class="button" title=".icon28 - Burn Blu-ray"><span class="icon icon28"></span></a>
+  <a href="#" class="button" title=".icon29 - Burn DVD"><span class="icon icon29"></span></a>
+  <a href="#" class="button" title=".icon30 - Burn DVD"><span class="icon icon30"></span></a>
+  <a href="#" class="button" title=".icon31 - Cabinet"><span class="icon icon31"></span></a>
+  <a href="#" class="button" title=".icon32 - Calculator"><span class="icon icon32"></span></a>
+  <a href="#" class="button" title=".icon33 - Calendar"><span class="icon icon33"></span></a>
+  <a href="#" class="button" title=".icon34 - Camera"><span class="icon icon34"></span></a>
+  <a href="#" class="button" title=".icon35 - Cancel"><span class="icon icon35"></span></a>
+  <a href="#" class="button" title=".icon36 - Card Clubs"><span class="icon icon36"></span></a>
+  <a href="#" class="button" title=".icon37 - Card Diamonds"><span class="icon icon37"></span></a>
+  <a href="#" class="button" title=".icon38 - Card Hearts"><span class="icon icon38"></span></a>
+  <a href="#" class="button" title=".icon39 - Card Spades"><span class="icon icon39"></span></a>
+  <a href="#" class="button" title=".icon40 - Certificate"><span class="icon icon40"></span></a>
+  <a href="#" class="button" title=".icon41 - Certificate"><span class="icon icon41"></span></a>
+  <a href="#" class="button" title=".icon42 - Chat Exclamation"><span class="icon icon42"></span></a>
+  <a href="#" class="button" title=".icon43 - Checkmark"><span class="icon icon43"></span></a>
+  <a href="#" class="button" title=".icon44 - Checkmark"><span class="icon icon44"></span></a>
+  <a href="#" class="button" title=".icon45 - Clip"><span class="icon icon45"></span></a>
+  <a href="#" class="button" title=".icon46 - Clipboard"><span class="icon icon46"></span></a>
+  <a href="#" class="button" title=".icon47 - Clock"><span class="icon icon47"></span></a>
+  <a href="#" class="button" title=".icon48 - Close"><span class="icon icon48"></span></a>
+  <a href="#" class="button" title=".icon49 - Cloud"><span class="icon icon49"></span></a>
+  <a href="#" class="button" title=".icon50 - Cloud"><span class="icon icon50"></span></a>
+  <a href="#" class="button" title=".icon51 - Coin"><span class="icon icon51"></span></a>
+  <a href="#" class="button" title=".icon52 - Compress"><span class="icon icon52"></span></a>
+  <a href="#" class="button" title=".icon53 - Connect"><span class="icon icon53"></span></a>
+  <a href="#" class="button" title=".icon54 - Contrast"><span class="icon icon54"></span></a>
+  <a href="#" class="button" title=".icon55 - Copy"><span class="icon icon55"></span></a>
+  <a href="#" class="button" title=".icon56 - Cross"><span class="icon icon56"></span></a>
+  <a href="#" class="button" title=".icon57 - Cutter"><span class="icon icon57"></span></a>
+  <a href="#" class="button" title=".icon58 - Delete"><span class="icon icon58"></span></a>
+  <a href="#" class="button" title=".icon59 - Dial"><span class="icon icon59"></span></a>
+  <a href="#" class="button" title=".icon60 - Diary"><span class="icon icon60"></span></a>
+  <a href="#" class="button" title=".icon61 - Dimensions"><span class="icon icon61"></span></a>
+  <a href="#" class="button" title=".icon62 - Directional Down"><span class="icon icon62"></span></a>
+  <a href="#" class="button" title=".icon63 - Directional Left"><span class="icon icon63"></span></a>
+  <a href="#" class="button" title=".icon64 - Directional Right"><span class="icon icon64"></span></a>
+  <a href="#" class="button" title=".icon65 - Directional Up"><span class="icon icon65"></span></a>
+  <a href="#" class="button" title=".icon66 - Disconnect"><span class="icon icon66"></span></a>
+  <a href="#" class="button" title=".icon67 - Diskette"><span class="icon icon67"></span></a>
+  <a href="#" class="button" title=".icon68 - Document"><span class="icon icon68"></span></a>
+  <a href="#" class="button" title=".icon69 - Door"><span class="icon icon69"></span></a>
+  <a href="#" class="button" title=".icon70 - Download"><span class="icon icon70"></span></a>
+  <a href="#" class="button" title=".icon71 - Dropper"><span class="icon icon71"></span></a>
+  <a href="#" class="button" title=".icon72 - Earphones"><span class="icon icon72"></span></a>
+  <a href="#" class="button" title=".icon73 - Effects"><span class="icon icon73"></span></a>
+  <a href="#" class="button" title=".icon74 - Eject"><span class="icon icon74"></span></a>
+  <a href="#" class="button" title=".icon75 - Emoticon Angry"><span class="icon icon75"></span></a>
+  <a href="#" class="button" title=".icon76 - Emoticon Confused"><span class="icon icon76"></span></a>
+  <a href="#" class="button" title=".icon77 - Emoticon Grin"><span class="icon icon77"></span></a>
+  <a href="#" class="button" title=".icon78 - Emoticon In Love"><span class="icon icon78"></span></a>
+  <a href="#" class="button" title=".icon79 - Emoticon Sad"><span class="icon icon79"></span></a>
+  <a href="#" class="button" title=".icon80 - Emoticon Sleeping"><span class="icon icon80"></span></a>
+  <a href="#" class="button" title=".icon81 - Emoticon Smile"><span class="icon icon81"></span></a>
+  <a href="#" class="button" title=".icon82 - Encrypt"><span class="icon icon82"></span></a>
+  <a href="#" class="button" title=".icon83 - Eraser"><span class="icon icon83"></span></a>
+  <a href="#" class="button" title=".icon84 - Eye"><span class="icon icon84"></span></a>
+  <a href="#" class="button" title=".icon85 - Eye Closed"><span class="icon icon85"></span></a>
+  <a href="#" class="button" title=".icon86 - Fast Forward"><span class="icon icon86"></span></a>
+  <a href="#" class="button" title=".icon87 - File"><span class="icon icon87"></span></a>
+  <a href="#" class="button" title=".icon88 - Fill"><span class="icon icon88"></span></a>
+  <a href="#" class="button" title=".icon89 - Fingerprint"><span class="icon icon89"></span></a>
+  <a href="#" class="button" title=".icon90 - Firewall"><span class="icon icon90"></span></a>
+  <a href="#" class="button" title=".icon91 - First"><span class="icon icon91"></span></a>
+  <a href="#" class="button" title=".icon92 - Folder"><span class="icon icon92"></span></a>
+  <a href="#" class="button" title=".icon93 - Font"><span class="icon icon93"></span></a>
+  <a href="#" class="button" title=".icon94 - Font Size"><span class="icon icon94"></span></a>
+  <a href="#" class="button" title=".icon95 - Game Control"><span class="icon icon95"></span></a>
+  <a href="#" class="button" title=".icon96 - Gear"><span class="icon icon96"></span></a>
+  <a href="#" class="button" title=".icon97 - Group"><span class="icon icon97"></span></a>
+  <a href="#" class="button" title=".icon98 - Hammer"><span class="icon icon98"></span></a>
+  <a href="#" class="button" title=".icon99 - Hand Point"><span class="icon icon99"></span></a>
+  <a href="#" class="button" title=".icon100 - Hand Thumbsdown"><span class="icon icon100"></span></a>
+
+  <a href="#" class="button" title=".icon101 - Hand Thumbsup"><span class="icon icon101"></span></a>
+  <a href="#" class="button" title=".icon102 - Hard Disk"><span class="icon icon102"></span></a>
+  <a href="#" class="button" title=".icon103 - Headset"><span class="icon icon103"></span></a>
+  <a href="#" class="button" title=".icon104 - Heart"><span class="icon icon104"></span></a>
+  <a href="#" class="button" title=".icon105 - Help"><span class="icon icon105"></span></a>
+  <a href="#" class="button" title=".icon106 - Help"><span class="icon icon106"></span></a>
+  <a href="#" class="button" title=".icon107 - History"><span class="icon icon107"></span></a>
+  <a href="#" class="button" title=".icon108 - Home"><span class="icon icon108"></span></a>
+  <a href="#" class="button" title=".icon109 - Hourglass"><span class="icon icon109"></span></a>
+  <a href="#" class="button" title=".icon110 - Hourglass"><span class="icon icon110"></span></a>
+  <a href="#" class="button" title=".icon111 - ID"><span class="icon icon111"></span></a>
+  <a href="#" class="button" title=".icon112 - Info"><span class="icon icon112"></span></a>
+  <a href="#" class="button" title=".icon113 - Info"><span class="icon icon113"></span></a>
+  <a href="#" class="button" title=".icon114 - Italic"><span class="icon icon114"></span></a>
+  <a href="#" class="button" title=".icon115 - Item"><span class="icon icon115"></span></a>
+  <a href="#" class="button" title=".icon116 - Key"><span class="icon icon116"></span></a>
+  <a href="#" class="button" title=".icon117 - Last"><span class="icon icon117"></span></a>
+  <a href="#" class="button" title=".icon118 - Lightbulb"><span class="icon icon118"></span></a>
+  <a href="#" class="button" title=".icon119 - Link"><span class="icon icon119"></span></a>
+  <a href="#" class="button" title=".icon120 - List"><span class="icon icon120"></span></a>
+  <a href="#" class="button" title=".icon121 - Location"><span class="icon icon121"></span></a>
+  <a href="#" class="button" title=".icon122 - Lock"><span class="icon icon122"></span></a>
+  <a href="#" class="button" title=".icon123 - Lock Open"><span class="icon icon123"></span></a>
+  <a href="#" class="button" title=".icon124 - Login"><span class="icon icon124"></span></a>
+  <a href="#" class="button" title=".icon125 - Mail"><span class="icon icon125"></span></a>
+  <a href="#" class="button" title=".icon126 - Mail Open"><span class="icon icon126"></span></a>
+  <a href="#" class="button" title=".icon127 - Messenger"><span class="icon icon127"></span></a>
+  <a href="#" class="button" title=".icon128 - Microphone"><span class="icon icon128"></span></a>
+  <a href="#" class="button" title=".icon129 - Microphone"><span class="icon icon129"></span></a>
+  <a href="#" class="button" title=".icon130 - Money Bag"><span class="icon icon130"></span></a>
+  <a href="#" class="button" title=".icon131 - Monitor"><span class="icon icon131"></span></a>
+  <a href="#" class="button" title=".icon132 - Moon"><span class="icon icon132"></span></a>
+  <a href="#" class="button" title=".icon133 - Music"><span class="icon icon133"></span></a>
+  <a href="#" class="button" title=".icon134 - Music Folder"><span class="icon icon134"></span></a>
+  <a href="#" class="button" title=".icon135 - Music Library"><span class="icon icon135"></span></a>
+  <a href="#" class="button" title=".icon136 - Next"><span class="icon icon136"></span></a>
+  <a href="#" class="button" title=".icon137 - Notepad"><span class="icon icon137"></span></a>
+  <a href="#" class="button" title=".icon138 - Paragraph Align Left"><span class="icon icon138"></span></a>
+  <a href="#" class="button" title=".icon139 - Paragraph Align Right"><span class="icon icon139"></span></a>
+  <a href="#" class="button" title=".icon140 - Paragraph Justify"><span class="icon icon140"></span></a>
+  <a href="#" class="button" title=".icon141 - Password"><span class="icon icon141"></span></a>
+  <a href="#" class="button" title=".icon142 - Paste"><span class="icon icon142"></span></a>
+  <a href="#" class="button" title=".icon143 - Pause"><span class="icon icon143"></span></a>
+  <a href="#" class="button" title=".icon144 - Pen"><span class="icon icon144"></span></a>
+  <a href="#" class="button" title=".icon145 - Pencil"><span class="icon icon145"></span></a>
+  <a href="#" class="button" title=".icon146 - Phone"><span class="icon icon146"></span></a>
+  <a href="#" class="button" title=".icon147 - Photo Album"><span class="icon icon147"></span></a>
+  <a href="#" class="button" title=".icon148 - Pictures Folder"><span class="icon icon148"></span></a>
+  <a href="#" class="button" title=".icon149 - Play"><span class="icon icon149"></span></a>
+  <a href="#" class="button" title=".icon150 - Point"><span class="icon icon150"></span></a>
+  <a href="#" class="button" title=".icon151 - Power"><span class="icon icon151"></span></a>
+  <a href="#" class="button" title=".icon152 - Previous"><span class="icon icon152"></span></a>
+  <a href="#" class="button" title=".icon153 - Print"><span class="icon icon153"></span></a>
+  <a href="#" class="button" title=".icon154 - Pyramid"><span class="icon icon154"></span></a>
+  <a href="#" class="button" title=".icon155 - Random"><span class="icon icon155"></span></a>
+  <a href="#" class="button" title=".icon156 - Record"><span class="icon icon156"></span></a>
+  <a href="#" class="button" title=".icon157 - Redo"><span class="icon icon157"></span></a>
+  <a href="#" class="button" title=".icon158 - Reload"><span class="icon icon158"></span></a>
+  <a href="#" class="button" title=".icon159 - Repeat"><span class="icon icon159"></span></a>
+  <a href="#" class="button" title=".icon160 - Resize"><span class="icon icon160"></span></a>
+  <a href="#" class="button" title=".icon161 - Rewind"><span class="icon icon161"></span></a>
+  <a href="#" class="button" title=".icon162 - Rotate"><span class="icon icon162"></span></a>
+  <a href="#" class="button" title=".icon163 - Round"><span class="icon icon163"></span></a>
+  <a href="#" class="button" title=".icon164 - Ruler Square"><span class="icon icon164"></span></a>
+  <a href="#" class="button" title=".icon165 - Satellite"><span class="icon icon165"></span></a>
+  <a href="#" class="button" title=".icon166 - Scissors"><span class="icon icon166"></span></a>
+  <a href="#" class="button" title=".icon167 - Screwdriver"><span class="icon icon167"></span></a>
+  <a href="#" class="button" title=".icon168 - Security"><span class="icon icon168"></span></a>
+  <a href="#" class="button" title=".icon169 - Shopping Basket"><span class="icon icon169"></span></a>
+  <a href="#" class="button" title=".icon170 - Software"><span class="icon icon170"></span></a>
+  <a href="#" class="button" title=".icon171 - Spam"><span class="icon icon171"></span></a>
+  <a href="#" class="button" title=".icon172 - Speaker"><span class="icon icon172"></span></a>
+  <a href="#" class="button" title=".icon173 - Speaker"><span class="icon icon173"></span></a>
+  <a href="#" class="button" title=".icon174 - Sphere"><span class="icon icon174"></span></a>
+  <a href="#" class="button" title=".icon175 - Spreadsheet"><span class="icon icon175"></span></a>
+  <a href="#" class="button" title=".icon176 - Square"><span class="icon icon176"></span></a>
+  <a href="#" class="button" title=".icon177 - Star"><span class="icon icon177"></span></a>
+  <a href="#" class="button" title=".icon178 - Stats Bars"><span class="icon icon178"></span></a>
+  <a href="#" class="button" title=".icon179 - Stats Lines"><span class="icon icon179"></span></a>
+  <a href="#" class="button" title=".icon180 - Stats Pie"><span class="icon icon180"></span></a>
+  <a href="#" class="button" title=".icon181 - Stop"><span class="icon icon181"></span></a>
+  <a href="#" class="button" title=".icon182 - Strike Through"><span class="icon icon182"></span></a>
+  <a href="#" class="button" title=".icon183 - Sun"><span class="icon icon183"></span></a>
+  <a href="#" class="button" title=".icon184 - Target"><span class="icon icon184"></span></a>
+  <a href="#" class="button" title=".icon185 - Thunder"><span class="icon icon185"></span></a>
+  <a href="#" class="button" title=".icon186 - Trash Can"><span class="icon icon186"></span></a>
+  <a href="#" class="button" title=".icon187 - Underlined"><span class="icon icon187"></span></a>
+  <a href="#" class="button" title=".icon188 - Undo"><span class="icon icon188"></span></a>
+  <a href="#" class="button" title=".icon189 - Upload"><span class="icon icon189"></span></a>
+  <a href="#" class="button" title=".icon190 - USB"><span class="icon icon190"></span></a>
+  <a href="#" class="button" title=".icon191 - User"><span class="icon icon191"></span></a>
+  <a href="#" class="button" title=".icon192 - User Woman"><span class="icon icon192"></span></a>
+  <a href="#" class="button" title=".icon193 - Volume Control"><span class="icon icon193"></span></a>
+  <a href="#" class="button" title=".icon194 - Web Cam"><span class="icon icon194"></span></a>
+  <a href="#" class="button" title=".icon195 - Window"><span class="icon icon195"></span></a>
+  <a href="#" class="button" title=".icon196 - Wizard"><span class="icon icon196"></span></a>
+  <a href="#" class="button" title=".icon197 - World"><span class="icon icon197"></span></a>
+  <a href="#" class="button" title=".icon198 - Zoom"><span class="icon icon198"></span></a>
+  <a href="#" class="button" title=".icon199 - Zoom In"><span class="icon icon199"></span></a>
+  <a href="#" class="button" title=".icon200 - Zoom Out"><span class="icon icon200"></span></a>
+</div> <!-- /.buttons -->
+
+<h3>Credits / Help:</h3>
+
+<div class="buttons">
+  <a href="http://www.socialite-media.co.za" class="button left"><span class="icon icon119"></span><span class="label">Social-IT-e Media</span></a>
+  <a href="http://shrapp.nl" class="button middle"><span class="icon icon42"></span><span class="label">The Blog</span></a>
+  <a href="http://shrapp.nl/post/google-plus-ui-buttons" class="button right"><span class="icon icon120"></span><span class="label">Documentation</span></a>
+</div> <!-- /.buttons -->
+
+<p>
+	<strong>Browser Support:</strong> Firefox, Chrome, Safari, IE8+</p>
+<p>
+	<a href="http://creativecommons.org/licenses/by/3.0/" rel="license"><img alt="Creative Commons License" src="http://i.creativecommons.org/l/by/3.0/88x31.png" style="border-width:0" /></a><br />
+	This work is licensed under a <a href="http://creativecommons.org/licenses/by/3.0/" rel="license">Creative Commons Attribution 3.0 Unported License</a>.</p>
+<p>
+	You are free:</p>
+
+<ul>
+	<li>
+		to Share &mdash; to copy, distribute and transmit the work</li>
+	<li>
+		to Remix &mdash; to adapt the work</li>
+	<li>
+
+		to make commercial use of the work</li>
+	<li>
+		give attribution if you want to</li>
+</ul>
+<p>
+	If you wish to develop further on these buttons, please remember to share with the web design community so we can all benefit!</p>
+
+</div> <!-- /#container -->
+
+</body>
+</html>
